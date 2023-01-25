@@ -1,0 +1,96 @@
+/* le pusimos una clase container al body con un width de 90%, y lo centramos con margin left y right automático y un espacio desde arriba con margin-top de 16px */
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+/* una clase a un div con un borde de 2px color negro y sólido */
+.border{
+    border: 2px #000 solid;
+}
+
+.h-700{
+    height: 700px;
+}
+
+.h-300{
+    height: 300px;
+}
+
+/* a cada div hijo le pusimos una clase item que están dentro de un div padre llamado border, con fondo peru, texto centrado, borde de 2px negro y sólido, con borde radius de 10px, un margin de 10px y un padding de 10px */
+.item{
+    background-color: peru;
+    text-align: center;
+    border: 2px #000 solid;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    /* width: 200px; */
+}
+
+/* si le ponemos display flex al contenedor padre entonces sus elementos hijos se haran flexibles ya que se posicionan uno al lado del otro, por defecto estaran en row que se distribuyen de izquierda a derecha, si ponemos flex-direction: row-reverse se distribuiran de derecha a izquierda, con column se distribuyen de arriba hacia abajo.
+
+con flex-wrap: wrap, podemos hacer que las cajas que no tengan el espacio suficiente se acomoden para abajo y con reverse se acomoden de abajo para arriba.
+
+con justify-content podemos distribuir los elementos en el contenedor, flex-start los distribuye desde el principio, flex-end desde el final, center los distribuye en el centro, space-between los distribuye uniformemente en la linea primer elemento está en el inicio y el último en el final, space-around los distribuye casi parecido al centro pero con un espacio entre elementos, space-evenly hace lo mismo solo que con un espacio más pequeño de separación.
+
+con align-items primero debemos establecer una altura al contenedor padre, el valor por defecto es stretch estira los elementos ocupado la altura disponible de su contenedor, flex-start los elementos se colocan al principio, flex-end los elementos se posicionan abajo del contenedor, center se centran, baseline se alinean según el texto.
+
+con align-content alinemos los elementos verticalmente, flex-star es el valor por defecto, flex-end los alinea para abajo, center los centra, stretch los estira según la altura que tengan disponible, space-between los alinea colocandolos al borde del contenedor junto con los elementos para el centro, space-around los alinea dejando una separación entre los bordes del contenedor padre.
+
+*/
+.flex-container{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: flex-end;
+    /* align-content: space-between; */
+}
+
+/* los elementos hijos tambien tienen propiedades 
+con order podemos establecer el orden de los elementos hijos dependiendo del valor que le asignemos.
+*/
+.order-1{
+    order: 0;
+}
+
+.order-2{
+    order: 2;
+}
+
+/* con flex-grow podemos distribuir el tamaño de los elementos de acuerdo al valor que le indiquemos para asi no estar calculando el ancho necesitamos asignar */
+.flex-grow-1{
+    flex-grow: 1;
+}
+
+/* debemos primero establecer un ancho ya que flex-shrink indica cual sera su ancho minimo, aca le pondremos 300pixeles y ese será su ancho mínimo */
+.flex-shrink-0{
+    width: 300px;
+    flex-shrink: 0;
+}
+
+/* flex-basis obliga a un item a tener una proporción determinada, aca por ejemplo le asignamos que ocupe el espacio del 50% disponible*/
+.flex-basis-1{
+    flex-basis: 50%;
+}
+
+/* aca combinaremos flex-grow, shrink y basis en un nuevo contenedor que hemos creado.
+el primer valor correponde a flex-grow.
+el segundo valor corresponde a flex-shrink.
+el tercer valor corresponde a flex-basis.
+*/
+.flex-1{
+    flex: 1 0;
+}
+
+.flex-2{
+    flex: 1 0 300px;
+}
+
+/* align-self le decimos a un elemento hijo que se posicione donde queramos */
+.align-self-start{
+    align-self: flex-start;
+}

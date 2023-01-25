@@ -1,0 +1,326 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* clase utilitaria, porque la voy a usar más de una vez.
+
+estilos para el container 
+width de 80%.
+un max-width de 1280px para que no sobrepase de ese tamaño.
+margin right y left automáticos para que el contenedor se centre.
+*/
+.container{
+    width: 80%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* header 
+con background-image elegimos la imagen de fondo.
+con background-repeat: no-repeat la imagen no se repite si es muy pequeña.
+con background-position: center centramos la imagen.
+con background-size: cover la imagen se adaptara al espacio disponible de su contenedor.
+con height le pusimo 18.75em que serian 300px ya que esta tomando el tamaño del html como referencia.
+*/
+.bg-header{
+    background-image: url('assets/bg-header-min.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 18.75em;
+}
+
+/* un fondo oscuro con opacidad.
+padding de 1.5em arriba y abajo y 0 para los lados. */
+.bg-navbar{
+    background-color: rgba(0, 0, 0, 0.288);
+    padding: 1.5em 0;
+}
+
+/* le aplicamos display: flex para que sean elementos flexibles.
+flex-direction-column para distribuirlos de arriba hacia abajo.
+y align items porque estamos trabajando de manera vertical.
+
+media querie en 768px navbar
+posicionamos los elementos en fila.
+distribuimos los elementos dejando un espacio a los lados*/
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:768px){
+    .navbar{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* display: flex para que sean elementos flexibles.
+flex-direction: column para distribuirlos de arriba hacia abajo.
+color blanco al texto.
+align-items center para centrar los elementos.
+font-size 2rem.
+text-decoration none para quitarle el subrayado.
+font-weight 600 seria el grosor que solicite a la fuente.
+y un margin-bottom 1em seria 32 pixeles ya que toma como base la fuente del texto.
+
+media querie navbar-brand en 768px.
+posicionamos los elementos en fila.
+espacio externo hacia abajo de 0px*/
+.navbar-brand{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+@media (min-width:768px){
+    .navbar-brand{
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+}
+
+/* le damos un ancho de 2em a la imagen que se encuentra dentro del contenedor con la clase navbar-brand */
+.navbar-brand img{
+    width: 2em;
+}
+
+/* un fondo color negro con transparencia.
+un padding de 1em.
+border-radius: 0.3em. */
+.navbar-nav{
+    background-color: rgba(0, 0, 0, 0.884);
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+/* display: inline-block permite agregar ancho y alto a elementos en linea.
+padding de 0.3em.
+text-decoration: none.
+color: white */
+.nav-link{
+    display: inline-block;
+    padding: 0.3em;
+    text-decoration: none;
+    color: white;
+}
+
+/* con la pseudoclase hover le añadimos un estilo que se activara al pasar el elemento con el mouse.
+fondo color negro.
+texto color blanco.
+bordes redondeados.*/
+.nav-link:hover{
+    background-color: black;
+    color: white;
+    border-radius: 0.3em;
+}
+
+/* main
+fondo blanco.
+espacio interno de 0.3em
+espacio externo negativo de -2em.
+borde redondeado de 0.3em.
+
+main-title
+alineamos el texto al centro.
+tranformamos el texto a mayúscula con la propiedad text-transform.
+*/
+.main{
+    background-color: white;
+    padding: 0.3em;
+    margin-top: -2em;
+    border-radius: 0.3em;
+}
+.main-title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ponemos un ancho de 20rem, un fondo, overflow hidden recorta el sobrante del contenido, rem aca toma como medida la del html ya que article no esta cnfigurado, tampoco section ni el body y por eso toma como medida el tamaño del html */
+.card{
+    background-color: #A6444C;
+    color: white;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1em;
+}
+
+/* ponemos un width de 100% para que la imagen no sobresalga del contenedor y ocupe el espacio disponilbe completo del contenedor */
+.card-img{
+    width: 100%;
+}
+
+.card-body{
+    padding: 1em;
+}
+
+/* aca estamos llamando al card-boy y al/los h5 que esten adentro del contenedor con la clase card-body luego ponemos un margin y un font-weight que esto indica el ancho de la letra(como hemos asignado 400 y 900 entonces 900 está disponible ya que es una tipografía de un sitio web) */
+.card-body h5{
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+    font-weight: 500;
+}
+
+.card-body p{
+    font-weight: 400;
+}
+
+/* display inline-block es un elemento en linea pero con los beneficios de un elemento en bloque */
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em;
+}
+.btn-danger{
+    background-color: #A6444C;
+    color:white;
+}
+.btn-primary{
+    background-color: #0F2620;
+    color:white;
+}
+.btn-secondary{
+    background-color: #7BA69A;
+    color:white;
+}
+.btn-light{
+    background-color: #DDF2CE;
+    color:white;
+}
+.btn-dark{
+    background-color: #302C2D;
+    color:white;
+}
+
+/* nosotros 
+convertimos los elementos en cajas flexibles.
+los direccionamos verticalmente.
+los alineamos al centro.
+le damos espacio externo abajo de 1em
+fondo color café.
+
+.nosostros-col-img
+ponemos la imágen de fondo.
+ponemos la imágen al centro.
+le decimos que no se repita si la imágen es pequeña.
+que se adapte al espacio disponible.
+altura de 21.875em.
+ancho del 100% (sin esta propiedad la imágen no se verá ya que utilizamos flex en el contenedor).
+ordén de 2.
+
+nosotros-col-text
+ordén de 1.
+
+nosotros-body
+espacio interno de 1em.
+alineamos el texto al centro.
+color blanco del texto.
+
+nosotros-body h2 = entramos al h2 donde un elemento tenga la clase nosotros-body
+transformamos el texto en mayúscula.
+le ponemos un grosor a la fuente de 600.
+
+nosotros-body p = entramos al p donde un elemento tenga la clase nosotros-body
+le ponemos un grosor a la fuente de 200.
+
+*/
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #302C2D;
+}
+.nosotros-col-img{
+    background-image: url("assets/nosotros-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 21.875em;
+    width: 100%;
+    order: 2;
+}
+.nosotros-col-text{
+    order: 1;
+}
+@media (min-width:576px){
+    .nosotros-col-img{
+        height: 31.25em;
+    }
+}
+@media (min-width:768px){
+    .nosotros{
+        flex-direction: row;
+    }
+    .nosotros-col-img{
+        order: 1;
+        flex: 1 1 0;
+    }
+    .nosotros-col-text{
+        order: 2;
+        flex: 1 1 0;
+    }
+}
+.nosotros-body{
+    padding: 1em;
+    text-align: center;
+    color: white;
+}
+.nosotros-body h2{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nosotros-body p{
+    font-weight: 200;
+}
+
+/* footer
+.bg-footer
+le ponemos fondo café oscuro.
+texto blanco.
+
+bg-footer p = tomamos la etiqueta p del elemento que tenga la clase bg-footer.
+un espacio externo de 0 a todos los lados.
+espacio interno de arriba y abajo de 1 em y a los lados de 0.
+centramos el texto.
+*/
+.bg-footer{
+    background-color: #302C2D;
+    color: white;
+}
+.bg-footer p{
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* media querie en 768px de la clase tienda
+le ponemos flex para que los elementos se hagan flexibles.
+gap otorga un espacio entre los elementos que esten dentro del contenedor, el espacio depende del valor que nosotros le asignemos. */
+@media (min-width:768px){
+    .tienda{
+        display: flex;
+        gap: 0.5em;
+    }
+}

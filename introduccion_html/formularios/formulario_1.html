@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <!-- el atributo action nos sirve para procesar nuestro formulario, osea a donde se iran los datos que seran escritos en el formulario, existen 2 tipos de method: get envia los datos en una cadena visible en el link que se utiliza para enviar pocos datos y post que envia los datos en forma invisible que no se muestra en el link que se utiliza para enviar una gran cantidad de datos -->
+    <form action="enviando.html" method="GET">
+        <!-- nos ayuda a relacionar o colocar un texto de ayuda para nuestros inputs el atributo for nos ayuda para relacionar el label con el input mediante el identificador que le coloquemos al input -->
+        <label for="nombre">Nombre: </label>
+        <!-- input es la caja donde el usuario escribira los datos y el atributo type nos indica que tipo de datos puede colocar el usuario estableciendo su valor y el atributo placeholder nos ayuda como una guia para el cliente de los datos que pide el input, al colocarle el atributo name relacionamos el input con el label y tambien para poder trabajar con un archivo javascript-->
+        <input name="nombre" id="nombre" type="text" placeholder="Ingrese su nombre">
+        <br>
+        <label for="apellido">Apellido: </label>
+        <input name="apellido" type="text" id="apellido" placeholder="Ingrese su apellido">
+        <br>
+        <!-- al poner el atributo type y valor submit indica que el boton procesara los datos del formulario -->
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

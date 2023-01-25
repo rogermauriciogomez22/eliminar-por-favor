@@ -1,0 +1,20 @@
+/* border-style es para definir el estilo de un borde  */
+.border-solid{
+    border-style: solid;
+}
+
+.border-dashed{
+    border-style: dashed;
+}
+
+/* display es para transformar un elemento en linea o en bloque, los elementos en linea ocupan el ancho del espacio del contenido pero los elementos en bloque ocupan todo el ancho disponible 
+inline para convertir el elemento en linea.
+block para convertir el elemento en bloque.
+*/
+.display-inline{
+    display: inline;
+}
+
+.display-block{
+    display: block;
+}

@@ -1,0 +1,99 @@
+/* esta seria la mejor configuracion para que los elementos contengan en valor de border-box*/
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+/* en los valores de font-family indica que tipo de letra se usara para trabajar, tiene más de 2 valores por si un tipo de letra no lo encuentra entonces utilizara el valor que le sigue */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* con max-width definimos un ancho maximo que tendra los contenedores, también definimos un ancho de 95%, centramos los contenedores con margin left y right asignandoles un valor automatico y un fondo aqua
+*/
+.container{
+    width: 95%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* aca el margin sera de 32 pixeles porque rem trabaja de acuedo a la medida base del body que serian 16 pixeles */
+.mt-2{
+    margin-top: 2rem;
+}
+
+/* con text-decoration podemos controlar el subrayado que tiene la etiqueta a, tambien le agregamos display block para convertirlo en elemento de bloque ya que los elementos en linea no se pueden centrar, le pusimos font-size 3rem(48px ya que la medida del body es de 16px y rem trabaja en base a esa medida), el padding de 1em(em trabaja de acuerdo a la medida de su contenedor padre y aca esta trabajando con 48 pixeles ya que esta trabajando en base al fontsize que es de 48 pixeles, colo blanco, fondo aqua pero con codigo hexadecimal y lo alineamos al centro con text-align center) */
+.logo{
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    padding: 1em;
+    color: white;
+    background-color: #264653;
+    text-align: center;
+}
+
+/* display inline-block es un elemento en linea pero con los beneficios de un elemento en bloque */
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em;
+}
+
+.btn-primary{
+    background-color: #264653;
+    color: white;
+}
+
+.btn-secondary{
+    background-color: #2a9d8f;
+    color: white;
+}
+
+.btn-danger{
+    background-color: #e76f51;
+    color: white;
+}
+
+.btn-info{
+    background-color: #e9c46a;
+    color:white;
+}
+
+/* ponemos un ancho de 20rem, un fondo, overflow hidden recorta el sobrante del contenido, rem aca toma como medida la del html ya que article no esta cnfigurado, tampoco section ni el body y por eso toma como medida el tamaño del html */
+.card{
+    width: 20rem;
+    background-color: #264653;
+    overflow: hidden;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* ponemos un width de 100% para que la imagen no sobresalga del contenedor y ocupe el espacio disponilbe completo del contenedor */
+.card-img{
+    width: 100%;
+}
+
+.card-body{
+    padding: 1em;
+}
+
+/* aca estamos llamando al card-boy y al/los h5 que esten adentro del contenedor con la clase card-body luego ponemos un margin y un font-weight que esto indica el ancho de la letra(como hemos asignado 400 y 900 entonces 900 está disponible ya que es una tipografía de un sitio web) */
+.card-body h5{
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+    font-weight: 900;
+}
+
+.card-body p{
+    font-weight: 400;
+}

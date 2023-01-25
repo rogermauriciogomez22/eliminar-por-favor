@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        main{
+            background-color: black;
+            color: white;
+        }
+        /* cuando la pantalla tenga como mínimo, desde un punto hacia adelante */
+        @media (min-width: 576px){
+            main{
+                background-color: peru;
+                display: flex;
+            }
+
+            article{
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 768px){
+            main{
+                background-color: violet;
+            }
+
+            article{
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio totam nobis unde in fuga deserunt mollitia. Fuga id deleniti nostrum earum sint sed maxime, soluta maiores impedit alias voluptates doloremque.</p>
+        </article>
+        <article>
+            <p>Quam corporis omnis deserunt eligendi necessitatibus fugit in a molestias, dolore ut consequuntur, sit quas aspernatur! Autem veniam suscipit perferendis sit commodi illo fuga, unde veritatis facilis consequuntur eveniet odio.</p>
+        </article>
+    </main>
+</body>
+</html>
